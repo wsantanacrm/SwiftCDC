@@ -1,0 +1,208 @@
+---
+swagger: "2.0"
+info:
+  description: "Criação e atualização dos consentimentos do cliente"
+  version: "1.0.0"
+  title: "API CDC - VTEX"
+  termsOfService: "https://www.swift.com.br/Institucional/politica-privacidade"
+  contact:
+    name: "Willi Santana"
+    url: "https://www.vertra.com.br"
+    email: "willi.santana@vertra.com.br"
+  license:
+    name: "Vertra"
+    url: "http://www.vertra.com.br"
+host: "l400314-iflmap.hcisbp.br1.hana.ondemand.com"
+basePath: "/http/vtex"
+schemes:
+- "https"
+paths:
+  /criacontatovtexapp2:
+    post:
+      summary: "Cria cliente"
+      description: "Cadastra cliente"
+      operationId: "criaCliente"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "criacontatovtexapp2"
+        required: false
+        schema:
+          $ref: "#/definitions/criacontatovtexapp2"
+      responses:
+        "206":
+          description: "Partial Content (Success)"
+        "400":
+          description: "Bad Request (JSON invalid)"
+        "401":
+          description: "Unauthorized (User or password invalid)"
+        "403":
+          description: "Forbiden (Access denied / prohibited)"
+      x-swagger-router-controller: "Default"
+  /atualizacaocontatovtexapp2:
+    post:
+      summary: "Atualiza cliente"
+      description: "Atualiza cliente"
+      operationId: "atualizaCliente"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "criacontatovtexapp2"
+        required: false
+        schema:
+          $ref: "#/definitions/criacontatovtexapp2_1"
+      responses:
+        "206":
+          description: "Partial Content (Success)"
+        "400":
+          description: "Bad Request (JSON invalid)"
+        "401":
+          description: "Unauthorized (User or password invalid)"
+        "403":
+          description: "Forbiden (Access denied / prohibited)"
+      x-swagger-router-controller: "Default"
+definitions:
+  criacontatovtexapp2:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+        example: "willi.santana@vertra.com.br"
+      nome:
+        type: "string"
+        example: "Willi"
+      sobrenome:
+        type: "string"
+        example: "Santana"
+      pais:
+        type: "string"
+        example: "Brasil"
+      estado:
+        type: "string"
+        example: "SP"
+      cidade:
+        type: "string"
+        example: "Sao Paulo"
+      dia_nascimento:
+        type: "string"
+        example: "07"
+      mes_nascimento:
+        type: "string"
+        example: "12"
+      ano_nascimento:
+        type: "string"
+        example: "1990"
+      celular:
+        type: "string"
+        example: "+5511983641640"
+      sexo:
+        type: "string"
+        example: "m"
+      cpf:
+        type: "string"
+        example: "34821321866"
+      politica_privacidade:
+        type: "integer"
+        example: "true"
+      subscrip_nps:
+        type: "integer"
+        example: "true"
+      subscrip_divulgacao:
+        type: "integer"
+        example: "true"
+      consent_email:
+        type: "integer"
+        example: "true"
+      consent_telefone:
+        type: "integer"
+        example: "true"
+      consent_mensagem:
+        type: "integer"
+        example: "true"
+      consent_rede_social:
+        type: "integer"
+        example: "true"
+      consent_correspondencia:
+        type: "integer"
+        example: "true"
+      subscrip_push:
+        type: "integer"
+        example: "false"
+      swift_vc:
+        type: "string"
+        example: "NAO"
+  criacontatovtexapp2_1:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+        example: "willi.santana@vertra.com.br"
+      nome:
+        type: "string"
+        example: "Willi"
+      sobrenome:
+        type: "string"
+        example: "Santana"
+      pais:
+        type: "string"
+        example: "Brasil"
+      estado:
+        type: "string"
+        example: "SP"
+      cidade:
+        type: "string"
+        example: "Sao Paulo"
+      dia_nascimento:
+        type: "string"
+        example: "07"
+      mes_nascimento:
+        type: "string"
+        example: "12"
+      ano_nascimento:
+        type: "string"
+        example: "1990"
+      celular:
+        type: "string"
+        example: "+5511983641640"
+      sexo:
+        type: "string"
+        example: "m"
+      cpf:
+        type: "string"
+        example: "34821321866"
+      politica_privacidade:
+        type: "integer"
+        example: "true"
+      subscrip_nps:
+        type: "integer"
+        example: "true"
+      subscrip_divulgacao:
+        type: "integer"
+        example: "true"
+      consent_email:
+        type: "integer"
+        example: "true"
+      consent_telefone:
+        type: "integer"
+        example: "true"
+      consent_mensagem:
+        type: "integer"
+        example: "true"
+      consent_rede_social:
+        type: "integer"
+        example: "true"
+      consent_correspondencia:
+        type: "integer"
+        example: "true"
+      subscrip_push:
+        type: "integer"
+        example: "false"
+      swift_vc:
+        type: "string"
+        example: "NAO"
